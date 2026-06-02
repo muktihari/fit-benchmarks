@@ -1,0 +1,8 @@
+[package]
+name = "rustyfit-main"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+embedded-io-adapters = { version = "0.7.0", features = ["std"] }
+rustyfit = "0.8.0"
