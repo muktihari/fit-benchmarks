@@ -37,8 +37,8 @@ fn main() {
     println!("records: {records}");
 
     println!(
-        "| rust | rustyfit | {:?} | {:.3} | [rustyfit](https://github.com/muktihari/rustyfit)",
-        filename.file_name().unwrap(),
+        "| rust | rustyfit | {} | {:.3} seconds | [rustyfit](https://github.com/muktihari/rustyfit) |",
+        filename.file_name().unwrap().to_string_lossy(),
         begin.elapsed().as_secs_f64()
     )
 }

@@ -3,7 +3,7 @@ DEST=./bin
 INSTALLDIR=$(DEST)
 OUT=./out
 
-TESTS=fitparser fitdataprotocol fitsdkcpp fitsdkobjc fitanalysis fitfitparse fitfitdecode javascript go fitsdkgo fitsdkswift
+TESTS=fitparser fitdataprotocol fitsdkcpp fitsdkobjc fitanalysis fitfitparse fitfitdecode javascript go fitsdkgo fitsdkswift rustyfit
 
 TESTS_SAMPLE=$(patsubst %,$(OUT)/%_sample.md,$(TESTS))
 TESTS_LARGE=$(patsubst %,$(OUT)/%_large.md,$(TESTS))
@@ -52,6 +52,9 @@ $(OUT)/go_%.md: go/fit.go
 
 $(OUT)/fitsdkgo_%.md: go/fitsdkgo/main.go
 	go run go/fitsdkgo/main.go $*.fit > $@
+
+$(OUT)/rustyfit_%.md: rust/rustyfit-main/src/main.rs
+	cargo run --manifest-path=rust/Cargo.toml -q -p rustyfit-main -r $*.fit > $@
 
 clean:
 	/bin/rm -f $(OUT)/*.md $(INSTALLDIR)/fitprotocol $(INSTALLDIR)/fitsdkcpp
