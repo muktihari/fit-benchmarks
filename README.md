@@ -23,6 +23,8 @@ This lead to a quick benchmarking of the different libraries. We'll review swift
 - [Official cpp SDK](https://developer.garmin.com/fit/example-projects/cpp/) is the official cpp sdk.
 - [Official objc SDK](https://developer.garmin.com/fit/example-projects/objc/) is the official objc sdk.
 - [Official swift SDK](https://github.com/garmin/fit-swift-sdk) is the official Garmin FIT Swift SDK.
+- [FIT SDK for Python](https://github.com/garmin/fit-python-sdk) is the official Garmin FIT Python SDK.
+- [FIT SDK for JavaScript](https://github.com/garmin/fit-javascript-sdk) is the official Garmin FIT JavaScript SDK.
 - [fit](https://github.com/tormoder/fit) is a go implementation (*)
 - [FIT SDK for Go](https://github.com/muktihari/fit) is a go library (*)
 - [rustyfit](https://github.com/muktihari/rustyfit) is a rust library (*)
@@ -49,11 +51,13 @@ Given the libraries used in practice by [ConnectStats](https://github.com/roznet
 | rust       | rustyfit           | sample.fit | 0.004 seconds  | [rustyfit](https://github.com/muktihari/rustyfit)                                |
 | go         | fitsdkgo           | sample.fit | 0.006 seconds  | [FIT SDK for Go](https://github.com/muktihari/fit)                               |
 | swift/c    | fitparser .fast    | sample.fit | 0.016 seconds  | [FitFileParser](https://github.com/roznet/FitFileParser)                         |
+| javascript | fitsdkjs           | sample.fit | 0.029 seconds  | [FIT SDK for JavaScript](https://github.com/garmin/fit-javascript-sdk)           |
 | php        | fitanalysis.php    | sample.fit | 0.057 seconds  | [phpFITFileAnalysis.php](https://github.com/adriangibbons/php-fit-file-analysis) |
 | swift/c    | fitparser .generic | sample.fit | 0.059 seconds  | [FitFileParser](https://github.com/roznet/FitFileParser)                         |
 | objc/cpp   | fitsdkobjc         | sample.fit | 0.186 seconds  | [Official objc SDK](https://developer.garmin.com/fit/example-projects/objc/)     |
 | cpp        | fitsdkcpp          | sample.fit | 0.198 seconds  | [Official cpp SDK](https://developer.garmin.com/fit/example-projects/cpp/)       |
 | swift      | fitprotocol        | sample.fit | 0.211 seconds  | [FitDataProtocol](https://github.com/FitnessKit/FitDataProtocol)                 |
+| python     | fitsdkpython.py    | sample.fit | 0.260 seconds  | [FIT SDK for Python](https://github.com/garmin/fit-python-sdk)                   |
 | swift      | fitsdkswift        | sample.fit | 0.265 seconds  | [Official swift SDK](https://github.com/garmin/fit-swift-sdk)                    |
 | python     | fitfitdecode.py    | sample.fit | 0.354 seconds  | [fitdecode](https://github.com/polyvertex/fitdecode)                             |
 | javascript | fit-file-parser.js | sample.fit | 0.499 seconds  | [fit-file-parser.js](https://github.com/jimmykane/fit-parser)                    |
@@ -61,8 +65,10 @@ Given the libraries used in practice by [ConnectStats](https://github.com/roznet
 | rust       | rustyfit           | large.fit  | 0.035 seconds  | [rustyfit](https://github.com/muktihari/rustyfit)                                |
 | go         | fit                | large.fit  | 0.044 seconds  | [fit](https://github.com/tormoder/fit)                                           |
 | go         | fitsdkgo           | large.fit  | 0.051 seconds  | [FIT SDK for Go](https://github.com/muktihari/fit)                               |
+| javascript | fitsdkjs           | large.fit  | 0.187 seconds  | [FIT SDK for JavaScript](https://github.com/garmin/fit-javascript-sdk)           |
 | swift/c    | fitparser .fast    | large.fit  | 0.268 seconds  | [FitFileParser](https://github.com/roznet/FitFileParser)                         |
 | swift/c    | fitparser .generic | large.fit  | 0.449 seconds  | [FitFileParser](https://github.com/roznet/FitFileParser)                         |
+| python     | fitsdkpython.py    | large.fit  | 2.586 seconds  | [FIT SDK for Python](https://github.com/garmin/fit-python-sdk)                   |
 | php        | fitanalysis.php    | large.fit  | 3.110 seconds  | [phpFITFileAnalysis.php](https://github.com/adriangibbons/php-fit-file-analysis) |
 | swift      | fitprotocol        | large.fit  | 3.332 seconds  | [FitDataProtocol](https://github.com/FitnessKit/FitDataProtocol)                 |
 | swift      | fitsdkswift        | large.fit  | 3.607 seconds  | [Official swift SDK](https://github.com/garmin/fit-swift-sdk)                    |

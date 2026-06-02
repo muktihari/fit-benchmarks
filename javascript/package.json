@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/roznet/fit-benchmarks#readme",
   "dependencies": {
+    "@garmin/fitsdk": "^21.205.0",
     "fit-file-parser": "^1.9.0"
   }
 }
