@@ -28,7 +28,7 @@ let package = Package(
         ),
         
         .executableTarget(
-            name: "fitdataprotocol",
+            name: "fitprotocol",
             dependencies: [ .product(name: "FitDataProtocol", package: "FitDataProtocol"),
                             .product(name: "ArgumentParser", package: "swift-argument-parser")]
         ),

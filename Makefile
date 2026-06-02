@@ -3,7 +3,7 @@ DEST=./bin
 INSTALLDIR=$(DEST)
 OUT=./out
 
-TESTS=fitparser fitdataprotocol fitsdkcpp fitsdkobjc fitanalysis fitfitparse fitfitdecode javascript go fitsdkgo fitsdkswift rustyfit
+TESTS=fitparser fitprotocol fitsdkcpp fitsdkobjc fitanalysis fitfitparse fitfitdecode javascript go fitsdkgo fitsdkswift rustyfit
 
 TESTS_SAMPLE=$(patsubst %,$(OUT)/%_sample.md,$(TESTS))
 TESTS_LARGE=$(patsubst %,$(OUT)/%_large.md,$(TESTS))
@@ -26,8 +26,8 @@ $(OUT)/fitparser_%.md: Sources/fitparser/main.swift
 $(OUT)/fitsdkswift_%.md: Sources/fitsdkswift/main.swift
 	swift run -c release fitsdkswift $*.fit > $@
 
-$(OUT)/fitdataprotocol_%.md: Sources/fitdataprotocol/main.swift
-	swift run -c release fitdataprotocol $*.fit > $@
+$(OUT)/fitprotocol_%.md: Sources/fitprotocol/main.swift
+	swift run -c release fitprotocol $*.fit > $@
 
 $(OUT)/fitsdkcpp_%.md: $(INSTALLDIR)/fitsdkcpp
 	$(INSTALLDIR)/fitsdkcpp $*.fit > $@
